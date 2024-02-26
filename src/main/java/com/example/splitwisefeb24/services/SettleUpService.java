@@ -54,6 +54,7 @@ public class SettleUpService {
                 expenses.stream().toList()
         );
 
+        //Fetch the expenses in which only the current user is a part of.
         List<Expense> finalSettleUpExpenses = new ArrayList<>();
         for(Expense settleUpExpense : settledUpExpenses) {
             for (ExpenseUser expenseUser : settleUpExpense.getExpenseUsers()) {
